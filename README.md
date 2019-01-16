@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
 
+## Deployment Steps:
+### Front end:
+* Download the front end angular code from https://github.com/kannadhaasan/AngularToDoApp.git
+* Extract the folder and direct the command prompt to the extracted folder
+* Run follwoing command: npm install, ng serve
+* Access the application from following URL: http://localhost:4200/home
+### Backend:
+* Download Backend code from https://github.com/kannadhaasan/SpringBootBackendTodo.git
+* Open in STS bundle and run as Java Application
+* Select ToDoApiAPP and click OK
+* Make sure both the application are up and running fine
+* Now create the task and test the application.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

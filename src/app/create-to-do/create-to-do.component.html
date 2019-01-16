@@ -1,0 +1,40 @@
+
+  
+    
+      <div class="col-md-4 ">
+
+        <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off" >
+          <legend>Create Task</legend>
+          <input type="hidden" name="id" #id="ngModel" [(ngModel)]="svc.formData.id" required>
+          <div class="form-group" col-md-6>
+            <label>Task Name:</label>
+            <input type="text" name="taskName" [(ngModel)]="svc.formData.taskName" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Task Description:</label>
+            <input type="text" name="taskDescription" [(ngModel)]="svc.formData.taskDescription" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Created Date:</label>
+            <input type="date" name="taskCreatedDate" [(ngModel)]="svc.formData.taskCreatedDate" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Updated Date: </label>
+            <input type="date" name="taskUpdateDate" [(ngModel)]="svc.formData.taskUpdateDate" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Status: </label>
+            <select type="dropdown" name="taskStatus" [(ngModel)]="svc.formData.taskStatus" class="form-control" required>
+              <option value="open">Open</option>
+              <option value="InProgress">In Progress</option>
+              <option value="Closed">Closed</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" [disabled]="form.invalid" (Click)="reload()" class="btn btn-lg btn-block">SUBMIT</button>
+          </div>
+
+        </form>
+      </div>
+    
+  
